@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="@color/red"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:src="@drawable/true_tactix_the_calling"
+        android:scaleType="fitCenter"
+        android:paddingVertical="10dp"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/play_ui_background2">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_toLeftOf="@+id/rewind_button"
+            android:layout_toStartOf="@+id/rewind_button"
+            android:src="@mipmap/previous_track_image" />
+
+        <ImageView
+            android:id="@+id/rewind_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/play_button_image"
+            android:layout_toStartOf="@+id/play_button_image"
+            android:src="@mipmap/rewind_button_image" />
+
+        <ImageView
+            android:id="@+id/play_button_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/play_button_image" />
+
+        <ImageView
+            android:id="@+id/fast_forward_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/play_button_image"
+            android:layout_toRightOf="@+id/play_button_image"
+            android:src="@mipmap/fastforward_image" />
+
+        <ImageView
+            android:id="@+id/next_track"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/fast_forward_button"
+            android:layout_toRightOf="@+id/fast_forward_button"
+            android:src="@mipmap/next_track_image" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/play_button_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:src="@mipmap/eq_button_image"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:src="@mipmap/shuffle_button_image"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:src="@mipmap/repeat_button_image"
+                android:textSize="30sp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:background="@drawable/play_ui__bottom_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="8dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Artist"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="8dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Song Title"
+            android:textSize="20sp"
+            android:textColor="@color/red"          />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="8dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="end|center_vertical"
+            android:text="Record Label"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="@color/gold"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
