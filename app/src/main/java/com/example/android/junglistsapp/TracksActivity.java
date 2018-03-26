@@ -54,9 +54,13 @@ public class TracksActivity  extends AppCompatActivity {
 
         listView.setAdapter(mAdapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) { Toast.makeText(TracksActivity.this, "This is my Toast message!",
+                    Toast.LENGTH_LONG).show();
 
-
-
+            }
+        });
     }
 
 }
