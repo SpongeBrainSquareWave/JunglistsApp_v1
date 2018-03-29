@@ -2,11 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:orientation="horizontal"
-    android:paddingHorizontal="8dp"
-    android:background="@color/green">
-    <!--android:singleLine="true"-!!-->
+    android:layout_height="wrap_content"
+    android:background="@color/green"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="100dp"
@@ -17,12 +19,13 @@
             android:id="@+id/track_textview"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_gravity="center"
             android:gravity="center_vertical"
             android:padding="@dimen/activity_horizontal_margin"
+            android:singleLine="true"
+            android:textColor="@color/gold"
             android:textSize="18sp"
-            tools:text="Real Bad Boys"
-            android:layout_gravity="center"
-            android:textColor="@color/gold"/>
+            tools:text="Real Bad Boys" />
 
         <!--<LinearLayout
             android:layout_width="match_parent"
@@ -30,20 +33,20 @@
             android:orientation="horizontal">-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            >
+            android:layout_height="50dp">
 
             <TextView
                 android:id="@+id/artist_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                android:layout_gravity="center"
                 android:gravity="center"
                 android:padding="@dimen/activity_horizontal_margin"
+                android:textColor="@color/gold"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 tools:text="Artist Name"
-                android:layout_gravity="center"
-                android:textColor="@color/gold"/>
+                android:singleLine="true"/>
 
         </LinearLayout>
         <!--<TextView
@@ -55,16 +58,18 @@
             android:textSize="18sp"
             tools:text="5:32" />-->
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="5">
+
         <ImageView
+            android:id="@+id/track_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/true_tactix_the_calling"
-            android:id="@+id/track_image"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside"
+            android:src="@drawable/true_tactix_the_calling" />
 
     </LinearLayout>
 
@@ -84,20 +89,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
-                android:textAlignment="center"
                 android:padding="@dimen/activity_horizontal_margin"
+                android:textAlignment="center"
                 tools:src="@mipmap/play_button_image" />
 
             <ImageView
                 android:id="@+id/track_details_textview"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textAlignment="center"
                 android:gravity="center_vertical"
                 android:padding="@dimen/activity_horizontal_margin"
+                android:textAlignment="center"
                 tools:src="@mipmap/info_button_image" />
         </LinearLayout>
 
     </LinearLayout>
-
+</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/red"/>
 </LinearLayout>
